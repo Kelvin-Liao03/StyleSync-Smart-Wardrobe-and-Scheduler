@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleSync.OutfitPage"
+             Title="Outfit Suggestions"
+             BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="🧥 StyleSync Outfit Recommender"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#2E3A59" />
+
+            <Picker x:Name="occasionPicker"
+                    Title="Select Occasion"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    TextColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Casual</x:String>
+                        <x:String>Formal</x:String>
+                        <x:String>Interview</x:String>
+                        <x:String>Wedding</x:String>
+                        <x:String>Workout</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Suggest Outfit"
+                    Clicked="OnSuggestClicked"
+                    BackgroundColor="#2E3A59"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill" />
+
+            <!-- Outfit Container -->
+            <StackLayout x:Name="OutfitContainer"
+                         IsVisible="False"
+                         HorizontalOptions="Center"
+                         Padding="0"
+                         Spacing="10">
+
+                <Frame BorderColor="#DDD"
+                       BackgroundColor="White"
+                       CornerRadius="12"
+                       Padding="15"
+                       HasShadow="True"
+                       Margin="0,0,0,10"
+                       WidthRequest="340"
+                       HorizontalOptions="Center">
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="10"
+                          HorizontalOptions="Center" VerticalOptions="Center">
+
+                        <!-- TOP -->
+                        <VerticalStackLayout Grid.Column="0"
+                                             Spacing="5"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="Center">
+                            <Frame CornerRadius="16" HasShadow="True" Padding="0"
+                                   HeightRequest="120" WidthRequest="120">
+                                <Image x:Name="TopImage" Aspect="AspectFill" />
+                            </Frame>
+                            <Label x:Name="TopLabel"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="#2E3A59"
+                                   LineBreakMode="WordWrap"
+                                   WidthRequest="130" />
+                        </VerticalStackLayout>
+
+                        <!-- BOTTOM -->
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="5"
+                                             HorizontalOptions="Center"
+                                             VerticalOptions="Center">
+                            <Frame CornerRadius="16" HasShadow="True" Padding="0"
+                                   HeightRequest="120" WidthRequest="120">
+                                <Image x:Name="BottomImage" Aspect="AspectFill" />
+                            </Frame>
+                            <Label x:Name="BottomLabel"
+                                   FontSize="13"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="#2E3A59"
+                                   LineBreakMode="WordWrap"
+                                   WidthRequest="130" />
+                        </VerticalStackLayout>
+
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+            <!-- Suggested Text -->
+            <Label x:Name="suggestionLabel"
+                   FontSize="16"
+                   FontAttributes="Italic"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#444"
+                   Padding="10"
+                   LineBreakMode="WordWrap" />
+
+            <!-- Date Picker for Event Date -->
+            <DatePicker x:Name="eventDatePicker"
+                        IsVisible="False"
+                        Format="D"
+                        HorizontalOptions="Fill"
+                        BackgroundColor="White"
+                        TextColor="Black" />
+
+            <!-- Pick & Skip Buttons -->
+            <Button x:Name="PickButton"
+                    Text="Pick This Outfit"
+                    Clicked="OnPickOutfitClicked"
+                    BackgroundColor="#198754"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    IsVisible="False"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill" />
+
+            <Button x:Name="SkipButton"
+                    Text="🔁 Skip"
+                    Clicked="OnSkipClicked"
+                    BackgroundColor="#6c757d"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    IsVisible="False"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

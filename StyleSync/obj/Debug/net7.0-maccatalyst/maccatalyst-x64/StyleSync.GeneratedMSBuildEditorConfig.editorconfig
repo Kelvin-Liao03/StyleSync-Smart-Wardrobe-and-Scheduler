@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = StyleSync
+build_property.ProjectDir = D:\C#\StyleSync\StyleSync\
+
+[D:/C\#/StyleSync/StyleSync/AddClothingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.AddClothingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddClothingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddClothingPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/C\#/StyleSync/StyleSync/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/C\#/StyleSync/StyleSync/CalendarPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.CalendarPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CalendarPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CalendarPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/EditClothingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.EditClothingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = EditClothingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = EditClothingPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/InventoryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.InventoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = InventoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = InventoryPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/OutfitPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.OutfitPage.xaml
+build_metadata.AdditionalFiles.TargetPath = OutfitPage.xaml
+build_metadata.AdditionalFiles.RelativePath = OutfitPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/C\#/StyleSync/StyleSync/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/C\#/StyleSync/StyleSync/RestoreOutfitsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.RestoreOutfitsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RestoreOutfitsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RestoreOutfitsPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/StyleOutfitPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.StyleOutfitPage.xaml
+build_metadata.AdditionalFiles.TargetPath = StyleOutfitPage.xaml
+build_metadata.AdditionalFiles.RelativePath = StyleOutfitPage.xaml
+
+[D:/C\#/StyleSync/StyleSync/WardrobePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.WardrobePage.xaml
+build_metadata.AdditionalFiles.TargetPath = WardrobePage.xaml
+build_metadata.AdditionalFiles.RelativePath = WardrobePage.xaml
+
+[D:/C\#/StyleSync/StyleSync/WeatherPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = StyleSync.WeatherPage.xaml
+build_metadata.AdditionalFiles.TargetPath = WeatherPage.xaml
+build_metadata.AdditionalFiles.RelativePath = WeatherPage.xaml

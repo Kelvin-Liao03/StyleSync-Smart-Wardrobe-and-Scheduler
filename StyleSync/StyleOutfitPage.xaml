@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:StyleSync.Converters"
+             x:Class="StyleSync.StyleOutfitPage"
+             Title="Style Your Outfit">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BoolToOpacityConverter x:Key="BoolToOpacityConverter" />
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- TOP SELECTION -->
+            <Label Text="👕 Choose Top" FontSize="18" FontAttributes="Bold" />
+            <CollectionView x:Name="TopCollection" ItemsLayout="HorizontalList" SelectionMode="Single"
+                            SelectionChanged="OnTopSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Frame BorderColor="Gray" Padding="5" Margin="5" CornerRadius="10">
+                                <Image Source="{Binding ImagePath}" 
+                                       HeightRequest="100" WidthRequest="100" 
+                                       Aspect="AspectFill"
+                                       Opacity="{Binding IsClean, Converter={StaticResource BoolToOpacityConverter}}" />
+                            </Frame>
+                            <Label Text="🧺"
+                                   FontSize="24"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   IsVisible="{Binding IsClean, Converter={StaticResource InverseBoolConverter}}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- BOTTOM SELECTION -->
+            <Label Text="👖 Choose Bottom" FontSize="18" FontAttributes="Bold" />
+            <CollectionView x:Name="BottomCollection" ItemsLayout="HorizontalList" SelectionMode="Single"
+                            SelectionChanged="OnBottomSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Frame BorderColor="Gray" Padding="5" Margin="5" CornerRadius="10">
+                                <Image Source="{Binding ImagePath}" 
+                                       HeightRequest="100" WidthRequest="100" 
+                                       Aspect="AspectFill"
+                                       Opacity="{Binding IsClean, Converter={StaticResource BoolToOpacityConverter}}" />
+                            </Frame>
+                            <Label Text="🧺"
+                                   FontSize="24"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   IsVisible="{Binding IsClean, Converter={StaticResource InverseBoolConverter}}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- PREVIEW SECTION -->
+            <StackLayout x:Name="PreviewContainer" IsVisible="False" Padding="10" Spacing="15">
+                <Label Text="👗 Preview" FontAttributes="Bold" FontSize="18" />
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="10" HorizontalOptions="Center">
+                    <Image x:Name="TopPreview" WidthRequest="100" HeightRequest="100" BackgroundColor="LightGray" Aspect="AspectFill" Grid.Column="0" />
+                    <Image x:Name="BottomPreview" WidthRequest="100" HeightRequest="100" BackgroundColor="LightGray" Aspect="AspectFill" Grid.Column="1" />
+                </Grid>
+            </StackLayout>
+
+            <!-- OCCASION + DATE + CONFIRM SECTION -->
+            <StackLayout x:Name="OccasionSection" IsVisible="False" Padding="5" Spacing="10">
+
+                <!-- Enter Occasion -->
+                <Button Text="🎯 Enter Occasion" Clicked="OnEnterOccasionClicked"
+                        BackgroundColor="#FF9800" TextColor="White"
+                        CornerRadius="10" HeightRequest="45" />
+
+                <!-- Display Chosen Occasion -->
+                <Label x:Name="OccasionLabel"
+                       Text=""
+                       FontAttributes="Italic"
+                       FontSize="16"
+                       TextColor="DarkSlateGray" />
+
+                <!-- Calendar Date Picker -->
+                <DatePicker x:Name="EventDatePicker"
+                            IsVisible="False"
+                            Format="yyyy-MM-dd" />
+
+                <!-- Confirm Button -->
+                <Button x:Name="ConfirmButton"
+                        Text="✅ Wear This Outfit"
+                        Clicked="OnConfirmClicked"
+                        IsVisible="False"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        HorizontalOptions="Fill" />
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

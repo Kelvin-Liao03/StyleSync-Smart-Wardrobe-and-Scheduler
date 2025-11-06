@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleSync.CalendarPage"
+             Title="My Calendar">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <Label Text="Select a Date"
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+        <DatePicker x:Name="eventDatePicker"
+                    DateSelected="OnDateSelected" />
+
+        <Label x:Name="eventLabel"
+               Text="No event selected."
+               FontSize="16"
+               HorizontalOptions="Center"
+               TextColor="DarkSlateGray" />
+
+    </VerticalStackLayout>
+</ContentPage>

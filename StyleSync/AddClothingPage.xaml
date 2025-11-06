@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleSync.AddClothingPage"
+             Title="Add Clothing Item"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Image Preview -->
+            <Image x:Name="ClothingImagePreview"
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   Aspect="AspectFill"
+                   BackgroundColor="LightGray"
+                   HorizontalOptions="Center" />
+
+            <!-- Pick Image Button -->
+            <Button Text="Pick Image"
+                    Clicked="OnPickImageClicked"
+                    BackgroundColor="LightBlue"
+                    TextColor="Black" />
+
+            <!-- Clothing Name -->
+            <Entry x:Name="NameEntry" Placeholder="Clothing Name" />
+
+            <!-- Clothing Type Picker -->
+            <Picker x:Name="TypePicker" Title="Select Clothing Type">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>T-shirt</x:String>
+                        <x:String>Shirt</x:String>
+                        <x:String>Blouse</x:String>
+                        <x:String>Pants</x:String>
+                        <x:String>Jeans</x:String>
+                        <x:String>Shorts</x:String>
+                        <x:String>Skirt</x:String>
+                        <x:String>Dress</x:String>
+                        <x:String>Jacket</x:String>
+                        <x:String>Hoodie</x:String>
+                        <x:String>Sweater</x:String>
+                        <x:String>Coat</x:String>
+                        <x:String>Tank Top</x:String>
+                        <x:String>Cardigan</x:String>
+                        <x:String>Others</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Color Picker with Grid -->
+            <Label Text="Select Color" FontSize="16" />
+
+            <Frame Padding="6"
+       BorderColor="LightGray"
+       CornerRadius="10"
+       BackgroundColor="White"
+       HasShadow="False"
+       HeightRequest="72"
+       HorizontalOptions="Start">
+
+                <CollectionView x:Name="ColorCollection"
+                    SelectionMode="Single"
+                    SelectionChanged="OnColorSelected"
+                    HorizontalOptions="Start"
+                    HeightRequest="60"
+                    Margin="0">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                             Span="11"
+                             HorizontalItemSpacing="0"
+                             VerticalItemSpacing="0" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="0"
+                       CornerRadius="8"
+                       HeightRequest="16"
+                       WidthRequest="16"
+                       BackgroundColor="{Binding}"
+                       BorderColor="Black"
+                       Margin="0.5"
+                       HasShadow="False" />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
+
+
+
+            <!-- Size Picker -->
+            <Picker x:Name="SizePicker" Title="Select Size">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>XS</x:String>
+                        <x:String>S</x:String>
+                        <x:String>M</x:String>
+                        <x:String>L</x:String>
+                        <x:String>XL</x:String>
+                        <x:String>XXL</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Occasion Picker -->
+            <Picker x:Name="OccasionPicker" Title="Suitable Occasion">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Casual</x:String>
+                        <x:String>Formal</x:String>
+                        <x:String>Interview</x:String>
+                        <x:String>Wedding</x:String>
+                        <x:String>Workout</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Weather Suitability Picker -->
+            <Picker x:Name="WeatherPicker" Title="Weather Suitability">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Hot</x:String>
+                        <x:String>Cold</x:String>
+                        <x:String>Rainy</x:String>
+                        <x:String>All Weather</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Clean & Available -->
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Label Text="Is Clean?" VerticalOptions="Center"/>
+                <Switch x:Name="IsCleanSwitch" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <Label Text="Is Available?" VerticalOptions="Center"/>
+                <Switch x:Name="IsAvailableSwitch" />
+            </StackLayout>
+
+            <!-- Save Button -->
+            <Button Text="Save Item"
+                    Clicked="OnSaveClicked"
+                    BackgroundColor="DarkSeaGreen"
+                    TextColor="White"
+                    Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

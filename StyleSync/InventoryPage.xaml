@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleSync.InventoryPage"
+             Title="Inventory Reminder">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Wardrobe Inventory Overview"
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+        <Button Text="Refresh Inventory"
+                Clicked="OnRefreshClicked"
+                HorizontalOptions="Center" />
+
+        <CollectionView x:Name="inventoryList" HeightRequest="300">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" CornerRadius="10" Padding="10" Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding Quantity, StringFormat='Total: {0}'}" />
+                            <Label Text="{Binding CleanCount, StringFormat='Clean: {0}'}" />
+                            <Label Text="{Binding IsAvailableText}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

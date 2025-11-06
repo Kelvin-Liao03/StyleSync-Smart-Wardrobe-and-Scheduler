@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleSync.LoginPage"
+             Title="Login"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="StyleSync Login"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="UsernameEntry" Placeholder="Username" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+
+            <Button Text="Login"
+                    BackgroundColor="#5A9"
+                    TextColor="White"
+                    Clicked="OnLoginClicked" />
+
+            <Button Text="Forgot Password?"
+                    BackgroundColor="Transparent"
+                    TextColor="Blue"
+                    FontAttributes="Italic"
+                    Clicked="OnForgotPasswordClicked"
+                    HorizontalOptions="Center" />
+
+            <Label Text="Don't have an account?"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Go to Register"
+                    BackgroundColor="#DDD"
+                    TextColor="Black"
+                    Clicked="OnGoToRegisterClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

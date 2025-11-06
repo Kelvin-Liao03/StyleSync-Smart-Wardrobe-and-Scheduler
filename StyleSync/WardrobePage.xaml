@@ -1,0 +1,48 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleSync.WardrobePage"
+             xmlns:models="clr-namespace:StyleSync.Models"
+             Title="My Wardrobe">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="My Clothing Inventory"
+                   FontSize="20"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Add New Clothing Item"
+                    Clicked="OnAddClothingClicked"
+                    BackgroundColor="DarkSeaGreen"
+                    TextColor="White"/>
+
+            <CollectionView x:Name="wardrobeList"
+                            Margin="0,10"
+                            SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ClothingItem">
+                        <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+                            <Grid ColumnDefinitions="100,*">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnItemTapped"/>
+                                </Grid.GestureRecognizers>
+
+                                <Image Source="{Binding ImagePath}"
+                                       WidthRequest="80"
+                                       HeightRequest="80"
+                                       Aspect="AspectFill"
+                                       Grid.Column="0" />
+
+                                <VerticalStackLayout Grid.Column="1" Padding="10,0">
+                                    <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Type}" FontSize="14"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
