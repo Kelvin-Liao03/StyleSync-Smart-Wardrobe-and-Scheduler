@@ -1,8 +1,8 @@
-#StyleSync: Smart Wardrobe & Scheduler
+# StyleSync: Smart Wardrobe & Scheduler
 
 A smart wardrobe management app designed to help users organize clothing, plan outfits, and receive personalized recommendations according to weather conditions.
 
-##Features
+## Features
 
 Add, edit, and delete clothing items
 
@@ -20,7 +20,7 @@ Color and style matching for outfit suggestions
 
 Calendar-based outfit scheduling
 
-##Technologies
+## Technologies
 
 Programming Language: C#
 
@@ -40,6 +40,6 @@ Data Management: DatabaseService with CRUD operations
 
 Platform: Cross-platform (Android, iOS, Windows)
 
-##Author
+## Author
 
 Kelvin Liao(San Tun Zaw)
